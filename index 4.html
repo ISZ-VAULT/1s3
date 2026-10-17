@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مظاهر الحياة العقلية للعرب في العصر الجاهلي</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&family=Reem+Kufi:wght@400;600;700&display=swap');
+
+:root{
+  --gold:#c9a13b;
+  --gold-light:#e6c96e;
+  --gold-dark:#8b671e;
+  --brown:#4a2f17;
+  --brown-dark:#2a1a0d;
+  --sand:#e9d3a3;
+  --sand-light:#f5e7c4;
+  --black:#150e07;
+  --cream:#fff3d0;
+  --muted:#b89558;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--black);
+  color:var(--cream);
+  font-family:"Amiri","Noto Naskh Arabic",serif;
+  overflow-x:hidden;
+}
+
+body{
+  scroll-snap-type:y mandatory;
+}
+
+.slide{
+  min-height:100vh;
+  display:grid;
+  place-items:center;
+  scroll-snap-align:start;
+  padding:2vh 0;
+}
+
+.frame{
+  position:relative;
+  width:min(94vw,calc(92vh * 16 / 9));
+  aspect-ratio:16/9;
+  overflow:hidden;
+  font-size:clamp(10px,1vw,16px);
+  background:
+    radial-gradient(circle at 20% 20%,rgba(74,47,23,.08) 0 2px,transparent 3px),
+    repeating-linear-gradient(45deg,transparent 0 38px,rgba(201,161,59,.06) 39px 40px),
+    repeating-linear-gradient(-45deg,transparent 0 38px,rgba(74,47,23,.045) 39px 40px),
+    var(--sand);
+  color:var(--brown-dark);
+  box-shadow:0 2em 5em rgba(0,0,0,.65);
+}
+
+.frame::before{
+  content:"";
+  position:absolute;
+  inset:1.7%;
+  border:2px solid var(--gold);
+  z-index:20;
+  pointer-events:none;
+}
+
+.frame::after{
+  content:"";
+  position:absolute;
+  inset:2.6%;
+  border:1px solid rgba(230,201,110,.75);
+  z-index:20;
+  pointer-events:none;
+}
+
+header{
+  position:absolute;
+  top:4.8%;
+  right:5%;
+  left:5%;
+  height:13%;
+  text-align:center;
+  z-index:5;
+}
+
+header h2{
+  margin:.05em 0 0;
+  font-family:"Reem Kufi","Noto Kufi Arabic",sans-serif;
+  font-size:2.15em;
+  line-height:1.15;
+  color:var(--brown-dark);
+  font-weight:700;
+}
+
+.header-line{
+  position:absolute;
+  top:73%;
+  width:18%;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+.header-line.right{right:6%}
+.header-line.left{left:6%}
+
+.header-line::after{
+  content:"";
+  position:absolute;
+  top:-4px;
+  width:10px;
+  height:10px;
+  background:var(--gold);
+  transform:rotate(45deg);
+}
+
+.header-line.right::after{left:-4px}
+.header-line.left::after{right:-4px}
+
+.three{
+  position:absolute;
+  top:20%;
+  right:4.5%;
+  left:4.5%;
+  bottom:11%;
+  display:grid;
+  grid-template-columns:35% 32.5% 28%;
+  gap:1.7%;
+  z-index:4;
+}
+
+.panel{
+  min-width:0;
+  min-height:0;
+  border:1.5px solid var(--gold);
+  border-radius:1em;
+  background:rgba(42,26,13,.96);
+  color:var(--cream);
+  box-shadow:.3em .35em 0 rgba(21,14,7,.22);
+  padding:.85em;
+  overflow:hidden;
+}
+
+.content-panel{
+  display:flex;
+  flex-direction:column;
+  gap:.55em;
+}
+
+.tag{
+  align-self:flex-start;
+  min-width:6em;
+  padding:.18em .7em;
+  border-radius:.5em;
+  background:var(--gold);
+  color:var(--black);
+  border:1px solid var(--gold-dark);
+  font-family:"Reem Kufi",sans-serif;
+  font-weight:700;
+  text-align:center;
+}
+
+.lead,
+.panel p,
+.panel li{
+  font-size:.98em;
+  line-height:1.55;
+}
+
+.lead{
+  margin:0;
+  padding:.35em .2em .55em;
+  border-bottom:1px solid rgba(201,161,59,.35);
+}
+
+.subtag{
+  color:var(--gold-light);
+  font-family:"Reem Kufi",sans-serif;
+  font-size:.88em;
+  font-weight:700;
+}
+
+.dots{
+  margin:0;
+  padding:0 .2em 0 0;
+  list-style:none;
+  display:grid;
+  gap:.45em;
+}
+
+.dots li{
+  position:relative;
+  padding-right:1.15em;
+}
+
+.dots li::before{
+  content:"◆";
+  position:absolute;
+  right:0;
+  top:.15em;
+  color:var(--gold-light);
+  font-size:.72em;
+}
+
+.source{
+  margin-top:auto;
+  padding-top:.4em;
+  color:var(--muted);
+  font-size:.73em;
+  border-top:1px solid rgba(201,161,59,.35);
+}
+
+.map-panel{
+  display:flex;
+  flex-direction:column;
+  padding:.55em;
+}
+
+.map-title{
+  align-self:center;
+  margin:.15em auto .2em;
+  padding:.15em .8em;
+  border-radius:.45em;
+  background:var(--brown);
+  border:1px solid var(--gold);
+  color:var(--gold-light);
+  font-family:"Reem Kufi",sans-serif;
+  font-size:.82em;
+  font-weight:700;
+}
+
+.mind{
+  flex:1;
+  min-height:0;
+}
+
+.mind svg{
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.media{
+  position:relative;
+  min-width:0;
+  min-height:0;
+  margin:0;
+  border:1.5px solid var(--gold);
+  border-radius:1em;
+  overflow:hidden;
+  background:var(--brown-dark);
+  box-shadow:.3em .35em 0 rgba(21,14,7,.22);
+}
+
+.media img{
+  display:block;
+  width:100%;
+  height:calc(100% - 2.2em);
+  object-fit:cover;
+  filter:saturate(.92) contrast(1.04);
+}
+
+.media figcaption{
+  height:2.2em;
+  display:grid;
+  place-items:center;
+  padding:0 .6em;
+  background:var(--gold);
+  color:var(--black);
+  font-family:"Reem Kufi",sans-serif;
+  font-size:.72em;
+  font-weight:700;
+  text-align:center;
+}
+
+.media figcaption a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.footer{
+  position:absolute;
+  bottom:3%;
+  left:0;
+  right:0;
+  text-align:center;
+  z-index:8;
+  color:var(--muted);
+  font-family:"Reem Kufi",sans-serif;
+  font-size:.68em;
+}
+
+.quote{
+  padding:.55em .7em;
+  border:1px solid var(--gold);
+  border-radius:.75em;
+  background:rgba(21,14,7,.42);
+}
+
+.quote .verse{
+  font-family:"Aref Ruqaa","Amiri",serif;
+  color:var(--cream);
+  font-size:1.02em;
+  line-height:1.65;
+  text-align:center;
+}
+
+.quote .poet{
+  margin-top:.15em;
+  color:var(--gold-light);
+  font-family:"Reem Kufi",sans-serif;
+  font-size:.72em;
+  text-align:left;
+}
+
+.chips{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:.35em .5em;
+}
+
+.chips span,
+.ref-chip{
+  display:grid;
+  place-items:center;
+  min-height:1.65em;
+  padding:.1em .35em;
+  border:1px solid rgba(201,161,59,.75);
+  border-radius:.45em;
+  background:rgba(21,14,7,.38);
+  color:var(--cream);
+  font-size:.76em;
+  text-align:center;
+}
+
+.name-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.3em .45em;
+}
+
+.name-list span{
+  padding:.28em .35em;
+  border:1px solid rgba(201,161,59,.7);
+  border-radius:.45em;
+  background:rgba(21,14,7,.38);
+  color:var(--cream);
+  font-size:.69em;
+  text-align:center;
+}
+
+.axis-list{
+  display:grid;
+  gap:.65em;
+  margin-top:.4em;
+}
+
+.axis{
+  display:grid;
+  grid-template-columns:2em 1fr;
+  align-items:center;
+  gap:.65em;
+  font-size:1.05em;
+}
+
+.axis b{
+  display:grid;
+  place-items:center;
+  width:1.7em;
+  height:1.7em;
+  border-radius:50%;
+  background:var(--gold);
+  color:var(--black);
+  font-family:"Reem Kufi",sans-serif;
+}
+
+.verse-stack{
+  display:grid;
+  gap:.55em;
+}
+
+.verse-card{
+  position:relative;
+  padding:.5em 2.2em .45em .65em;
+  border:1px solid var(--gold);
+  border-radius:.75em;
+  background:rgba(21,14,7,.45);
+}
+
+.verse-card:nth-child(2){
+  background:rgba(74,47,23,.68);
+}
+
+.verse-card .num{
+  position:absolute;
+  top:.35em;
+  right:.45em;
+  width:1.35em;
+  height:1.35em;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--gold);
+  color:var(--black);
+  font-family:"Reem Kufi",sans-serif;
+  font-size:.72em;
+  font-weight:700;
+}
+
+.verse-card h4{
+  margin:.05em 0 .15em;
+  color:var(--gold-light);
+  font-family:"Reem Kufi",sans-serif;
+  font-size:.82em;
+}
+
+.verse-card p{
+  margin:0;
+  font-family:"Aref Ruqaa","Amiri",serif;
+  font-size:.82em;
+  line-height:1.55;
+  text-align:center;
+}
+
+.refs{
+  display:grid;
+  gap:.34em;
+  margin-top:.25em;
+}
+
+.ref{
+  display:grid;
+  grid-template-columns:1.65em 1fr;
+  align-items:center;
+  gap:.45em;
+  font-size:.72em;
+}
+
+.ref b{
+  display:grid;
+  place-items:center;
+  width:1.35em;
+  height:1.35em;
+  border-radius:50%;
+  background:var(--gold);
+  color:var(--black);
+  font-family:"Reem Kufi",sans-serif;
+}
+
+/* Cover */
+.cover .bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.cover .scrim{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(21,14,7,.78),rgba(21,14,7,.34) 42%,rgba(21,14,7,.83)),
+    radial-gradient(circle at center,transparent 20%,rgba(21,14,7,.42));
+}
+
+.cover-content{
+  position:absolute;
+  inset:0;
+  z-index:4;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding-top:8%;
+  color:var(--cream);
+}
+
+.bism{
+  margin:0 0 .45em;
+  color:var(--sand-light);
+  font-size:.78em;
+}
+
+.school-circle{
+  width:10.8em;
+  height:10.8em;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  padding:1.1em;
+  background:var(--gold);
+  border:.28em solid var(--gold-light);
+  outline:.1em solid var(--gold-dark);
+  color:var(--black);
+  font-family:"Reem Kufi",sans-serif;
+  font-weight:700;
+  line-height:1.35;
+  font-size:1em;
+}
+
+.cover h1{
+  margin:.55em 0 .25em;
+  font-family:"Aref Ruqaa","Amiri",serif;
+  font-size:2.55em;
+  line-height:1.45;
+  color:var(--cream);
+}
+
+.cover-rule{
+  width:34%;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+
+.cover .subject{
+  margin:.35em 0 .2em;
+  color:var(--gold-light);
+  font-family:"Reem Kufi",sans-serif;
+  font-size:1.02em;
+  font-weight:700;
+}
+
+.cover .date{
+  margin:.2em 0 .4em;
+  font-size:.86em;
+  color:var(--sand-light);
+}
+
+.cover .team{
+  max-width:80%;
+  padding:.35em .8em;
+  border-top:1px solid rgba(230,201,110,.55);
+  border-bottom:1px solid rgba(230,201,110,.55);
+  font-size:.78em;
+  line-height:1.55;
+}
+
+.image-credit{
+  position:absolute;
+  bottom:3.4%;
+  left:3.5%;
+  z-index:9;
+  color:var(--sand-light);
+  font-size:.55em;
+  opacity:.9;
+}
+
+.image-credit a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* Slide 10 */
+.full-map-wrap{
+  position:absolute;
+  top:19%;
+  right:5%;
+  left:5%;
+  bottom:15%;
+  z-index:4;
+}
+
+.full-map{
+  width:100%;
+  height:100%;
+}
+
+.key-idea{
+  position:absolute;
+  right:19%;
+  left:19%;
+  bottom:6.8%;
+  z-index:8;
+  padding:.35em .8em;
+  border:1px solid var(--gold);
+  border-radius:.7em;
+  background:rgba(42,26,13,.96);
+  color:var(--cream);
+  text-align:center;
+  font-size:.78em;
+  line-height:1.5;
+}
+
+/* Final */
+.final-grid{
+  position:absolute;
+  top:20%;
+  right:4.5%;
+  left:4.5%;
+  bottom:11%;
+  display:grid;
+  grid-template-columns:37% 60%;
+  gap:2%;
+  z-index:4;
+}
+
+.summary{
+  display:flex;
+  flex-direction:column;
+  gap:.6em;
+}
+
+.summary .lead{
+  flex:1;
+  font-size:1.02em;
+}
+
+.thanks{
+  padding:.7em;
+  border-radius:.8em;
+  background:var(--gold);
+  color:var(--black);
+  text-align:center;
+}
+
+.thanks h3{
+  margin:.1em 0 .1em;
+  font-family:"Aref Ruqaa",serif;
+  font-size:1.65em;
+  line-height:1.5;
+}
+
+.thanks p{
+  margin:0;
+  font-size:.72em;
+  color:var(--brown-dark);
+}
+
+.team-panel{
+  display:flex;
+  flex-direction:column;
+}
+
+.team-title{
+  align-self:center;
+  padding:.15em .8em;
+  margin-bottom:.55em;
+  border:1px solid var(--gold);
+  border-radius:.45em;
+  background:var(--brown);
+  color:var(--gold-light);
+  font-family:"Reem Kufi",sans-serif;
+  font-weight:700;
+}
+
+.team-grid{
+  flex:1;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.7em;
+}
+
+.member{
+  position:relative;
+  padding:.65em 2.2em .65em .6em;
+  border:1px solid var(--gold);
+  border-radius:.75em;
+  background:rgba(21,14,7,.42);
+}
+
+.member:nth-child(2),
+.member:nth-child(3){
+  background:rgba(74,47,23,.68);
+}
+
+.member .badge{
+  position:absolute;
+  top:.55em;
+  right:.55em;
+  width:1.45em;
+  height:1.45em;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--gold);
+  color:var(--black);
+  font-family:"Reem Kufi",sans-serif;
+  font-weight:700;
+}
+
+.member h4{
+  margin:0 0 .3em;
+  color:var(--gold-light);
+  font-family:"Reem Kufi",sans-serif;
+  font-size:.92em;
+}
+
+.member p{
+  margin:0;
+  padding-top:.3em;
+  border-top:1px solid rgba(201,161,59,.5);
+  font-size:.72em;
+  line-height:1.45;
+}
+
+.school-date{
+  margin-top:.7em;
+  padding:.35em .6em;
+  border:1px solid var(--gold);
+  border-radius:.65em;
+  background:rgba(21,14,7,.48);
+  text-align:center;
+  font-size:.72em;
+  line-height:1.5;
+}
+
+/* Navigation */
+.nav{
+  position:fixed;
+  z-index:100;
+  bottom:1.2rem;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  align-items:center;
+  gap:.7rem;
+  direction:rtl;
+}
+
+.nav button{
+  border:1px solid var(--gold);
+  border-radius:999px;
+  background:rgba(21,14,7,.9);
+  color:var(--cream);
+  padding:.55rem 1.1rem;
+  font-family:"Reem Kufi",sans-serif;
+  cursor:pointer;
+}
+
+.nav button:hover{
+  background:var(--gold);
+  color:var(--black);
+}
+
+#page{
+  min-width:4.5rem;
+  text-align:center;
+  color:var(--sand);
+  font-family:"Reem Kufi",sans-serif;
+  font-size:.85rem;
+}
+
+#progress{
+  position:fixed;
+  z-index:101;
+  top:0;
+  right:0;
+  height:4px;
+  width:0;
+  background:linear-gradient(90deg,var(--gold-light),var(--gold));
+}
+
+@media (max-width:800px){
+  .frame{font-size:8.5px}
+  .three{grid-template-columns:37% 32% 28%;gap:1%}
+  .panel{padding:.55em}
+}
+
+@media print{
+  body{background:white;scroll-snap-type:none}
+  .slide{min-height:auto;height:100vh;page-break-after:always;padding:0}
+  .nav,#progress{display:none!important}
+  .frame{width:100%;height:100%;box-shadow:none}
+}
+</style>
+</head>
+
+<body>
+<div id="progress"></div>
+
+<nav class="nav" aria-label="التنقل بين الشرائح">
+  <button id="next">التالي</button>
+  <span id="page">1 / 11</span>
+  <button id="prev">السابق</button>
+</nav>
+
+<!-- 1: الغلاف -->
+<section class="slide" id="slide-1">
+  <div class="frame cover">
+    <img class="bg"
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Horace_Vernet_%281789-1863%29_-_Arabs_Travelling_in_the_Desert_-_P584_-_The_Wallace_Collection.jpg"
+      alt="صحراء عربية قديمة">
+    <div class="scrim"></div>
+
+    <div class="cover-content">
+      <p class="bism">بسم الله الرحمن الرحيم</p>
+      <div class="school-circle">ثانوية<br>أوكراف محمد</div>
+      <h1>مظاهر الحياة العقلية<br>للعرب في العصر الجاهلي</h1>
+      <div class="cover-rule"></div>
+      <div class="subject">مادة اللغة العربية وآدابها</div>
+      <div class="date">التاريخ: 15 أكتوبر 2026م &nbsp;•&nbsp; 04 جمادى الأولى 1447هـ</div>
+      <div class="team">
+        إعداد فريق العمل:<br>
+        غربي محمد • بليدي طاها • بلعمار يسرى • ندى الأطرش
+      </div>
+    </div>
+
+    <div class="image-credit">
+      <a href="https://commons.wikimedia.org/wiki/File:Horace_Vernet_(1789-1863)_-_Arabs_Travelling_in_the_Desert_-_P584_-_The_Wallace_Collection.jpg">
+        الصورة: Wikimedia Commons
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 2: المقدمة -->
+<section class="slide" id="slide-2">
+  <div class="frame">
+    <header>
+      <h2>المقدمة: العصر الجاهلي</h2>
+      <span class="header-line right"></span>
+      <span class="header-line left"></span>
+    </header>
+
+    <div class="three">
+      <div class="panel content-panel">
+        <div class="tag">تعريف</div>
+        <p class="lead">
+          العصر الجاهلي هو الفترة التي سبقت بعثة النبي ﷺ، وامتدّت قرونًا في
+          شبه الجزيرة العربية؛ وسمّي بالجاهلية لقلة العلم وانتشار الظن
+          والتقليد بعيدًا عن وحي السماء.
+        </p>
+
+        <div class="tag">لماذا ندرسه؟</div>
+        <ul class="dots">
+          <li>أوّل عهدنا بالأدب العربي المدوّن، وفيه نما الشعرُ وتفرّعت الأغراض.</li>
+          <li>حفظ العرب صحراءهم وحياتهم في ألفاظٍ دقيقة ومثلٍ محكمةٍ وخطابةٍ بليغة.</li>
+          <li>شكّل القرآن الكريم معجزًا لغويًا في عهدٍ كان العربُ فيه أهلَ بيانٍ وفصاحة.</li>
+        </ul>
+
+        <div class="source">المصادر: كتاب الأدب العربي • الموسوعة العربية</div>
+      </div>
+
+      <div class="panel map-panel">
+        <div class="map-title">خريطة ذهنية</div>
+        <div class="mind"
+             data-center="أهمية|العصر"
+             data-branches="ذخيرة لغوية|منبع الشعر|بيئة القرآن|سوق عكاظ"></div>
+      </div>
+
+      <figure class="media">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Pre_Islamic_Arabia.PNG"
+          alt="خريطة شبه الجزيرة العربية قبل الإسلام">
+        <figcaption>
+          <a href="https://commons.wikimedia.org/wiki/File:Pre_Islamic_Arabia.PNG">
+            خريطة شبه الجزيرة العربية قبل الإسلام — Wikimedia Commons
+          </a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="footer">02 / 11</div>
+  </div>
+</section>
+
+<!-- 3: الفهرس -->
+<section class="slide" id="slide-3">
+  <div class="frame">
+    <header>
+      <h2>الفهرس</h2>
+      <span class="header-line right"></span>
+      <span class="header-line left"></span>
+    </header>
+
+    <div class="three">
+      <div class="panel content-panel">
+        <div class="tag">المحاور الخمسة</div>
+
+        <div class="axis-list">
+          <div class="axis"><b>1</b><span>الشعر الجاهلي</span></div>
+          <div class="axis"><b>2</b><span>الخطابة</span></div>
+          <div class="axis"><b>3</b><span>الأمثال والحكم</span></div>
+          <div class="axis"><b>4</b><span>المعلقات السبع</span></div>
+          <div class="axis"><b>5</b><span>الحياة اللغوية</span></div>
+        </div>
+      </div>
+
+      <div class="panel map-panel">
+        <div class="map-title">خريطة ذهنية</div>
+        <div class="mind"
+             data-center="مظاهر|الحياة العقلية"
+             data-branches="الشعر|الخطابة|الأمثال|المعلقات|اللغة"></div>
+      </div>
+
+      <figure class="media">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Qur%27anic_Manuscript_-_Maghribi_script.jpg"
+          alt="مخطوطة عربية مزخرفة">
+        <figcaption>
+          <a href="https://commons.wikimedia.org/wiki/File:Qur%27anic_Manuscript_-_Maghribi_script.jpg">
+            مخطوطة عربية مزخرفة — Wikimedia Commons
+          </a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="footer">03 / 11</div>
+  </div>
+</section>
+
+<!-- 4: الشعر الجاهلي -->
+<section class="slide" id="slide-4">
+  <div class="frame">
+    <header>
+      <h2>الشعر الجاهلي</h2>
+      <span class="header-line right"></span>
+      <span class="header-line left"></span>
+    </header>
+
+    <div class="three">
+      <div class="panel content-panel">
+        <div class="tag">تعريف</div>
+        <p>
+          كلامٌ موزون مقفّى عبّر فيه الشاعر عن حياته الصحراوية
+          وقيم مجتمعه.
+        </p>
+
+        <div class="tag">أغراض الشعر</div>
+        <div class="chips">
+          <span>المدح</span><span>الرثاء</span>
+          <span>الفخر</span><span>الغزل</span>
+          <span>الحماسة</span><span>الوصف</span>
+        </div>
+
+        <div class="tag">أشهر الشعراء</div>
+        <p class="name-list">
+          <span>امرؤ القيس</span><span>عنترة</span>
+          <span>زهير</span><span>طرفة</span>
+          <span>لبيد</span><span>عمرو بن كلثوم</span>
+        </p>
+
+        <div class="quote">
+          <div class="verse">
+            «قِفَا نَبْكِ مِنْ ذِكْرَى حَبِيبٍ وَمَنْزِلِ ۞<br>
+            بِسِقْطِ اللِّوَى بَيْنَ الدَّخُولِ فَحَوْمَلِ»
+          </div>
+          <div class="poet">— امرؤ القيس</div>
+        </div>
+      </div>
+
+      <div class="panel map-panel">
+        <div class="map-title">خريطة ذهنية</div>
+        <div class="mind"
+             data-center="الشعر|الجاهلي"
+             data-branches="التعريف|الأغراض|الشعراء|الوصف|الذخيرة|العروض"></div>
+      </div>
+
+      <figure class="media">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Arabic_Manuscript%3B_Poem_on_general_anatomy_Wellcome_L0010773.jpg"
+          alt="مخطوطة شعرية عربية">
+        <figcaption>
+          <a href="https://commons.wikimedia.org/wiki/File:Arabic_Manuscript;_Poem_on_general_anatomy_Wellcome_L0010773.jpg">
+            مخطوطة شعرية عربية — Wikimedia Commons
+          </a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="footer">04 / 11</div>
+  </div>
+</section>
+
+<!-- 5: الخطابة والأمثال -->
+<section class="slide" id="slide-5">
+  <div class="frame">
+    <header>
+      <h2>الخطابة والأمثال</h2>
+      <span class="header-line right"></span>
+      <span class="header-line left"></span>
+    </header>
+
+    <div class="three">
+      <div class="panel content-panel">
+        <div class="tag">الخطابة</div>
+        <p>
+          فنّ إقناع الناس في المجالس والمناسبات بحضور البيان والإيجاز.
+        </p>
+
+        <div class="subtag">الخصائص:</div>
+        <div class="chips">
+          <span>قوة الحجة</span>
+          <span>صولة الأسلوب</span>
+          <span>كثرة الأمثال</span>
+          <span>حماسة القومية</span>
+        </div>
+
+        <p>
+          <b class="subtag">أشهر الخطباء:</b><br>
+          قسّ بن ساعدة الإيادي • أوس بن حجر
+        </p>
+
+        <div class="quote">
+          <div class="verse">«الضَّرْبُ فِي المَيِّتِ أَوْعَظُ مِنَ الكَلاَمِ»</div>
+          <div class="poet">المعنى: لا يجدي الكلامُ مَنْ لا ينتفع بالعظة.</div>
+        </div>
+      </div>
+
+      <div class="panel map-panel">
+        <div class="map-title">خريطة ذهنية</div>
+        <div class="mind"
+             data-center="البلاغة|الجاهلية"
+             data-branches="الخطابة|الأمثال|الوعظ|الفخر|الإقناع"></div>
+      </div>
+
+      <figure class="media">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Niels_Simonsen_-_An_Arab_Family_in_the_Desert_-_KMS2064_-_Statens_Museum_for_Kunst.jpg"
+          alt="عرب في مجلس صحراوي">
+        <figcaption>
+          <a href="https://commons.wikimedia.org/wiki/File:Niels_Simonsen_-_An_Arab_Family_in_the_Desert_-_KMS2064_-_Statens_Museum_for_Kunst.jpg">
+            عرب في مجلس صحراوي — Wikimedia Commons
+          </a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="footer">05 / 11</div>
+  </div>
+</section>
+
+<!-- 6: المعلقات السبع -->
+<section class="slide" id="slide-6">
+  <div class="frame">
+    <header>
+      <h2>المعلقات السبع</h2>
+      <span class="header-line right"></span>
+      <span class="header-line left"></span>
+    </header>
+
+    <div class="three">
+      <div class="panel content-panel">
+        <div class="tag">المعنى والتسمية</div>
+        <p>
+          قصائد جاهلية ممتازة جُمّعت وشاع أنها كانت تُعلَّق بأستار
+          الكعبة تشريفًا لها.
+        </p>
+
+        <div class="tag">شعراء المعلقات</div>
+        <div class="name-list">
+          <span>امرؤ القيس</span>
+          <span>طرفة بن العبد</span>
+          <span>زهير بن أبي سلمى</span>
+          <span>لبيد بن ربيعة</span>
+          <span>عمرو بن كلثوم</span>
+          <span>عنترة بن شداد</span>
+          <span>الحارث بن حلزة</span>
+        </div>
+
+        <div class="quote">
+          <div class="verse">
+            «أَمِنْ أُمِّ أَوْفَى دِمَنٌ لَمْ تَكَلَّمِ ۞<br>
+            بِوَادِي الغَضَا أَضْحَى عَهْدُهُ مُتَقَدِّمِ»
+          </div>
+          <div class="poet">— زهير بن أبي سلمى</div>
+        </div>
+      </div>
+
+      <div class="panel map-panel">
+        <div class="map-title">خريطة ذهنية</div>
+        <div class="mind"
+             data-center="المعلقات|السبع"
+             data-branches="امرؤ القيس|طرفة|زهير|لبيد|عمرو|عنترة|الحارث"></div>
+      </div>
+
+      <figure class="media">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Kaaba_%281910%29-2.jpg"
+          alt="الكعبة المشرفة قديمًا">
+        <figcaption>
+          <a href="https://commons.wikimedia.org/wiki/File:Kaaba_(1910)-2.jpg">
+            الكعبة المشرفة قديمًا — Wikimedia Commons
+          </a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="footer">06 / 11</div>
+  </div>
+</section>
+
+<!-- 7: الحياة اللغوية -->
+<section class="slide" id="slide-7">
+  <div class="frame">
+    <header>
+      <h2>الحياة اللغوية</h2>
+      <span class="header-line right"></span>
+      <span class="header-line left"></span>
+    </header>
+
+    <div class="three">
+      <div class="panel content-panel">
+        <div class="tag">ملامح اللغة</div>
+        <ul class="dots">
+          <li>لغة فصيحة عميقة قبل الإسلام، برزت في الشعر والخطابة والحِكم.</li>
+          <li>لهجات متعددة: قريش، هذيل، تميم، حِمْير وغيرها.</li>
+          <li>مفردات دقيقة للصحراء: السَّما، واللَّيل، والجمال، والمطر، والمنافي.</li>
+          <li>الصحراء مدرسة لغوية؛ فالشاعر يصف المكان والحيوان والنبات والظلال بوصف دقيق.</li>
+        </ul>
+
+        <div class="tag">سوق عكاظ</div>
+        <p>
+          موسم أدبي جمع الشعراء والخطباء؛ نشطت فيه الإلقاءات،
+          وتنافست القبائل في البيان.
+        </p>
+      </div>
+
+      <div class="panel map-panel">
+        <div class="map-title">خريطة ذهنية</div>
+        <div class="mind"
+             data-center="اللغة|العربية"
+             data-branches="اللهجات|المفردات|عكاظ|الشعر|الخطابة"></div>
+      </div>
+
+      <figure class="media">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Zuhayr_inscription.png"
+          alt="نقش عربي قديم">
+        <figcaption>
+          <a href="https://commons.wikimedia.org/wiki/File:Zuhayr_inscription.png">
+            نقش عربي قديم — زهير — Wikimedia Commons
+          </a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="footer">07 / 11</div>
+  </div>
+</section>
+
+<!-- 8: أبيات مشهورة -->
+<section class="slide" id="slide-8">
+  <div class="frame">
+    <header>
+      <h2>أبيات مشهورة</h2>
+      <span class="header-line right"></span>
+      <span class="header-line left"></span>
+    </header>
+
+    <div class="three">
+      <div class="panel content-panel verse-stack">
+        <div class="verse-card">
+          <span class="num">1</span>
+          <h4>عنترة بن شداد</h4>
+          <p>
+            «هَلْ غَادَرَ الشُّعَرَاءُ مِنْ مُتَرَدَّمِ ۞<br>
+            أَمْ هَلْ عَرَفْتَ الدَّارَ بَعْدَ تَوَهُّمِ»
+          </p>
+        </div>
+
+        <div class="verse-card">
+          <span class="num">2</span>
+          <h4>امرؤ القيس</h4>
+          <p>
+            «قِفَا نَبْكِ مِنْ ذِكْرَى حَبِيبٍ وَمَنْزِلِ ۞<br>
+            بِسِقْطِ اللِّوَى بَيْنَ الدَّخُولِ فَحَوْمَلِ»
+          </p>
+        </div>
+
+        <div class="verse-card">
+          <span class="num">3</span>
+          <h4>زهير بن أبي سلمى</h4>
+          <p>
+            «أَمِنْ أُمِّ أَوْفَى دِمَنٌ لَمْ تَكَلَّمِ ۞<br>
+            بِوَادِي الغَضَا أَضْحَى عَهْدُهُ مُتَقَدِّمِ»
+          </p>
+        </div>
+      </div>
+
+      <div class="panel map-panel">
+        <div class="map-title">خريطة ذهنية</div>
+        <div class="mind"
+             data-center="الأبيات|المختارة"
+             data-branches="عنترة|امرؤ القيس|زهير|الفخر|الحكمة"></div>
+      </div>
+
+      <figure class="media">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Arabic_Manuscript%3B_Poem_on_general_anatomy_Wellcome_L0010769.jpg"
+          alt="مخطوطة شعرية عربية">
+        <figcaption>
+          <a href="https://commons.wikimedia.org/wiki/File:Arabic_Manuscript;_Poem_on_general_anatomy_Wellcome_L0010769.jpg">
+            مخطوطة شعرية عربية — Wikimedia Commons
+          </a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="footer">08 / 11</div>
+  </div>
+</section>
+
+<!-- 9: المصادر والمراجع -->
+<section class="slide" id="slide-9">
+  <div class="frame">
+    <header>
+      <h2>المصادر والمراجع</h2>
+      <span class="header-line right"></span>
+      <span class="header-line left"></span>
+    </header>
+
+    <div class="three">
+      <div class="panel content-panel">
+        <div class="tag">قائمة المراجع</div>
+
+        <div class="refs">
+          <div class="ref"><b>1</b><span>كتاب الأدب العربي</span></div>
+          <div class="ref"><b>2</b><span>المعلقات السبع</span></div>
+          <div class="ref"><b>3</b><span>دواوين الشعر الجاهلي</span></div>
+          <div class="ref"><b>4</b><span>الموسوعة العربية</span></div>
+          <div class="ref"><b>5</b><span>دوريات الشرق الأدبية</span></div>
+          <div class="ref"><b>6</b><span>حنا عتيق — بحوث ودراسات</span></div>
+          <div class="ref"><b>7</b><span>كتب البلاغة والنحو والأخبار</span></div>
+          <div class="ref"><b>8</b><span>Wikimedia Commons — صور المخطوطات والنقوش</span></div>
+        </div>
+      </div>
+
+      <div class="panel map-panel">
+        <div class="map-title">خريطة ذهنية</div>
+        <div class="mind"
+             data-center="المصادر|والمراجع"
+             data-branches="الأدب العربي|المعلقات|الدواوين|الموسوعة|الدوريات|حنا عتيق|البلاغة|الصور"></div>
+      </div>
+
+      <figure class="media">
+        <img loading="lazy"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Flickr_-_dlisbona_-_Old_Koran_manuscript%2C_Alexandria_library.jpg"
+          alt="كتب ومخطوطات عربية قديمة">
+        <figcaption>
+          <a href="https://commons.wikimedia.org/wiki/File:Flickr_-_dlisbona_-_Old_Koran_manuscript,_Alexandria_library.jpg">
+            كتب ومخطوطات عربية قديمة — Wikimedia Commons
+          </a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="footer">09 / 11</div>
+  </div>
+</section>
+
+<!-- 10: الخريطة الشاملة -->
+<section class="slide" id="slide-10">
+  <div class="frame">
+    <header>
+      <h2>الخريطة الذهنية الشاملة</h2>
+      <span class="header-line right"></span>
+      <span class="header-line left"></span>
+    </header>
+
+    <div class="full-map-wrap">
+      <div class="mind full-map"
+           data-large="true"
+           data-center="مظاهر الحياة|العقلية الجاهلية"
+           data-branches="الشعر|الخطابة|الأمثال|المعلقات|الحياة اللغوية|أشهر الشعراء|الخطباء|المصادر"></div>
+    </div>
+
+    <div class="key-idea">
+      الفكرة الجامعة: شعرٌ يحفظ الذاكرة، وخطابةٌ تصوغ الرأي، ولغةٌ دقيقة تصنع هوية العرب.
+    </div>
+
+    <div class="footer">10 / 11</div>
+  </div>
+</section>
+
+<!-- 11: الخاتمة وفريق العمل -->
+<section class="slide" id="slide-11">
+  <div class="frame">
+    <header>
+      <h2>الخاتمة وفريق العمل</h2>
+      <span class="header-line right"></span>
+      <span class="header-line left"></span>
+    </header>
+
+    <div class="final-grid">
+      <div class="panel summary">
+        <div class="tag">خلاصة</div>
+        <p class="lead">
+          شهد العصر الجاهلي نشأةَ ملحمةٍ لغوية عظيمة؛ فكان الشعرُ ذاكرة القبيلة،
+          والخطابةُ صوت المجلس، والمثلُ حكمة الصحراء، والمعلقةُ لوحةَ الفخر
+          التي وصلت إلينا عبر التاريخ.
+        </p>
+
+        <div class="thanks">
+          <h3>شكرًا لحسن استماعكم 🌙</h3>
+          <p>نسأل الله لنا ولكم التوفيق والسداد</p>
+        </div>
+      </div>
+
+      <div class="panel team-panel">
+        <div class="team-title">فريق العمل</div>
+
+        <div class="team-grid">
+          <div class="member">
+            <span class="badge">1</span>
+            <h4>غربي محمد</h4>
+            <p>صانع العرض والمدير</p>
+          </div>
+
+          <div class="member">
+            <span class="badge">2</span>
+            <h4>بليدي طاها</h4>
+            <p>مساعد في الديزاين والأفكار</p>
+          </div>
+
+          <div class="member">
+            <span class="badge">3</span>
+            <h4>بلعمار يسرى</h4>
+            <p>شرح الموضوع والبرزنتايشن</p>
+          </div>
+
+          <div class="member">
+            <span class="badge">4</span>
+            <h4>ندى الأطرش</h4>
+            <p>قارئة ومساعدة في الشرح</p>
+          </div>
+        </div>
+
+        <div class="school-date">
+          ثانوية أوكراف محمد<br>
+          15 أكتوبر 2026م &nbsp;•&nbsp; 04 جمادى الأولى 1447هـ
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">11 / 11</div>
+  </div>
+</section>
+
+<script>
+(function(){
+  const NS = "http://www.w3.org/2000/svg";
+
+  function el(name, attrs = {}, parent = null){
+    const node = document.createElementNS(NS, name);
+    for(const key in attrs){
+      node.setAttribute(key, attrs[key]);
+    }
+    if(parent) parent.appendChild(node);
+    return node;
+  }
+
+  function createMindMap(container){
+    const branches = (container.dataset.branches || "").split("|").filter(Boolean);
+    const centerLines = (container.dataset.center || "الموضوع").split("|");
+    const large = container.dataset.large === "true";
+
+    const W = large ? 1000 : 420;
+    const H = large ? 430 : 420;
+    const cx = W / 2;
+    const cy = H / 2;
+    const maxLen = Math.max(...branches.map(x => x.length), 2);
+
+    const nodeW = large
+      ? Math.min(155, Math.max(105, maxLen * 10 + 42))
+      : Math.min(145, Math.max(86, maxLen * 9 + 42));
+    const nodeH = large ? 52 : 44;
+
+    const rx = W/2 - nodeW/2 - (large ? 28 : 14);
+    const ry = H/2 - nodeH/2 - (large ? 26 : 12);
+
+    const svg = el("svg", {
+      viewBox:`0 0 ${W} ${H}`,
+      role:"img",
+      "aria-label":"خريطة ذهنية"
+    });
+    svg.style.direction = "rtl";
+
+    const defs = el("defs", {}, svg);
+    const marker = el("marker", {
+      id:"arrow-" + Math.random().toString(36).slice(2),
+      markerWidth:"8",
+      markerHeight:"8",
+      refX:"7",
+      refY:"4",
+      orient:"auto"
+    }, defs);
+    el("path", {
+      d:"M0,0 L8,4 L0,8 Z",
+      fill:"#8b671e"
+    }, marker);
+
+    branches.forEach((branch, i) => {
+      const angle = -Math.PI/2 + (Math.PI*2*i/branches.length);
+      const nx = cx + rx * Math.cos(angle);
+      const ny = cy + ry * Math.sin(angle);
+
+      el("line", {
+        x1:cx, y1:cy,
+        x2:nx, y2:ny,
+        stroke:"#8b671e",
+        "stroke-width": large ? 2 : 1.5,
+        "stroke-linecap":"round"
+      }, svg);
+
+      const g = el("g", {}, svg);
+      el("rect", {
+        x:nx-nodeW/2,
+        y:ny-nodeH/2,
+        width:nodeW,
+        height:nodeH,
+        rx:8,
+        fill:i%2 ? "#2a1a0d" : "#4a2f17",
+        stroke:"#c9a13b",
+        "stroke-width":1.2
+      }, g);
+
+      el("text", {
+        x:nx,
+        y:ny+1,
+        "text-anchor":"middle",
+        "dominant-baseline":"middle",
+        fill:"#fff3d0",
+        "font-size": large ? 16 : 13,
+        "font-family":"Amiri, serif",
+        "font-weight":"700",
+        direction:"rtl"
+      }, g).textContent = branch;
+    });
+
+    el("ellipse", {
+      cx, cy,
+      rx: large ? 125 : 70,
+      ry: large ? 60 : 52,
+      fill:"#c9a13b",
+      stroke:"#8b671e",
+      "stroke-width":3
+    }, svg);
+
+    el("ellipse", {
+      cx, cy,
+      rx: large ? 113 : 60,
+      ry: large ? 49 : 42,
+      fill:"none",
+      stroke:"#e6c96e",
+      "stroke-width":1.5
+    }, svg);
+
+    const text = el("text", {
+      x:cx,
+      y:cy,
+      "text-anchor":"middle",
+      "dominant-baseline":"middle",
+      fill:"#150e07",
+      "font-size": large ? 20 : 14,
+      "font-family":"Reem Kufi, sans-serif",
+      "font-weight":"700",
+      direction:"rtl"
+    }, svg);
+
+    const startDy = -(centerLines.length-1)*0.65;
+    centerLines.forEach((line, idx) => {
+      const tspan = el("tspan", {
+        x:cx,
+        dy: idx === 0 ? `${startDy}em` : "1.3em"
+      }, text);
+      tspan.textContent = line;
+    });
+
+    container.innerHTML = "";
+    container.appendChild(svg);
+  }
+
+  document.querySelectorAll(".mind").forEach(createMindMap);
+
+  const slides = [...document.querySelectorAll(".slide")];
+  const page = document.getElementById("page");
+  const progress = document.getElementById("progress");
+
+  function activeIndex(){
+    const y = window.scrollY + window.innerHeight/2;
+    let best = 0;
+    slides.forEach((s, i) => {
+      if(s.offsetTop <= y) best = i;
+    });
+    return best;
+  }
+
+  function update(){
+    const i = activeIndex();
+    page.textContent = `${i+1} / ${slides.length}`;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? (window.scrollY / max) * 100 : 0;
+    progress.style.width = pct + "%";
+  }
+
+  function go(delta){
+    const i = Math.min(slides.length-1, Math.max(0, activeIndex()+delta));
+    slides[i].scrollIntoView({behavior:"smooth"});
+  }
+
+  document.getElementById("next").addEventListener("click",()=>go(1));
+  document.getElementById("prev").addEventListener("click",()=>go(-1));
+
+  window.addEventListener("scroll", update, {passive:true});
+  window.addEventListener("resize", update);
+
+  window.addEventListener("keydown", e => {
+    if(["ArrowDown","PageDown","ArrowLeft"].includes(e.key)){
+      e.preventDefault(); go(1);
+    }
+    if(["ArrowUp","PageUp","ArrowRight"].includes(e.key)){
+      e.preventDefault(); go(-1);
+    }
+    if(e.key === "Home"){
+      e.preventDefault(); slides[0].scrollIntoView({behavior:"smooth"});
+    }
+    if(e.key === "End"){
+      e.preventDefault(); slides.at(-1).scrollIntoView({behavior:"smooth"});
+    }
+  });
+
+  update();
+})();
+</script>
+</body>
+</html>
